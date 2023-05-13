@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Edit Contact</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        #avatarImg {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-header {
+            background-color: purple;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .form-group label {
+            color: purple;
+        }
+
+        .btn-primary {
+            background-color: purple;
+            border-color: purple;
+        }
+
+        .btn-primary:hover {
+            background-color: #8a2be2;
+            border-color: #8a2be2;
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: purple;
+            border-color: purple;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f6f6f6;
+            color: #8a2be2;
+            border-color: #8a2be2;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+    </style>
+</head>
+<body onload="getContact()">
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Edit Contact</h5>
+            </div>
+            <div class="card-body">
+                <div id="avatarImage"></div>
+                <form id="editForm">
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" class="form-control" name="firstname" id="firstname" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" class="form-control" name="lastname" id="lastname" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile:</label>
+                        <input type="text" class="form-control" name="mobile" id="mobile" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" readonly>
+                    </div>
+                    <div class="form-group" hidden>
+                        <label for="avatar">Change profile image:</label>
+                        <input type="file" class="form-control-file" name="avatar" id="avatar">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitForm" hidden>Submit</button>
+                </form>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-secondary" id="homeLink" type="button">Home</button>
+
+                <button class="btn btn-secondary" id="editContact" type="button">Edit</button>
+                <button class="btn btn-secondary" id="deleteContact">Delete</button>
+            </div>
+    <script src="js/config.js"></script>
+    <script src="js/edit-contact.js"></script>
+</body>
+</html>
