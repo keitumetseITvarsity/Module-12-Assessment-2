@@ -4,14 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>API Key</title>
 </head>
 <body>
-    <div>Please enter a valid API key.</div>
-    <form>
-        <input type="email" id="apiKey" name="apiKey">
-        <button id="submitApiKey">Submit</button>
-    </form>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        .card {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .card-header {
+            background-color: purple;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .form-group label {
+            color: purple;
+        }
+
+        .btn-primary {
+            background-color: purple;
+            border-color: purple;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #8a2be2;
+            border-color: #8a2be2;
+        }
+    </style>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">API Key</h5>
+            </div>
+            <div class="card-body">
+                <div>Please enter a valid API key.</div>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="email" id="apiKey" name="apiKey">
+                        <button id="submitApiKey" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="js/api-key.js"></script>
 </body>
